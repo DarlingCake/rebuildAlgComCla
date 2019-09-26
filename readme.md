@@ -2,8 +2,17 @@ Hello,this is a new change.
 
 basic：
 
-* git init
-* git clone git@github.com/daringcake/***.git
-* git push -u origin master（加上了`-u`参数，Git不但会把本地的`master`分支内容推送的远程新的`master`分支，还会把本地的`master`分支和远程的`master`分支关联起来，在以后的推送或者拉取时就可以简化命令。）
-* 其后只需git push origin master
-* 
+$ git init                    #把当前目录变成git可以管理的仓库
+$ git add readme.txt          #添加一个文件，也可以添加文件夹
+$ git add -A                  #添加全部文件
+$ git commit -m "some commit" #提交修改
+$ git status                  #查看是否还有未提交
+$ git log                     #查看最近日志
+$ git reset --hard HEAD^      #版本回退一个版本
+$ git reset --hard HEAD^^     #版本回退两个版本
+$ git reset --hard HEAD~100   #版本回退多个版本
+$ git remote add origin +地址 #远程仓库的提交（第一次链接）
+$ git clone git@github.com/daringcake/***.git
+$ git push -u origin master   #仓库关联
+$ git push                    #远程仓库的提交（第二次及之后）
+
